@@ -17,9 +17,9 @@ class Api
     }
 
     /**
-     * @return array
+     * @return character[]
      */
-    public function getAllCharacters(): array
+    public function getAllMarines(): array
     {
         $response = $this->client->request(
             'GET',
@@ -39,7 +39,7 @@ class Api
     }
 
     /**
-     * @return array
+     * @return character[]
      */
     private function extractCharactersFromGroup(Crawler $groupCrawler): array
     {
