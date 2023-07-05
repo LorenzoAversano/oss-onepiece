@@ -11,13 +11,10 @@ class ApiTest extends TestCase
         $client = HttpClient::create();
         $api = new Api($client);
         $characters = $api->getAllCharacters();
-        // foreach ($characters as $group => $marines) {
-        //     echo "Groupes: $group\n";
-        //     echo "Marine:\n";
-        //     foreach ($marines as $marine) {
-        //         echo "- $marine\n";
-        //     }
-        //     echo "\n";
-        // }    
+        // Affichage des personnages par lettre
+        foreach ($characters as $letter => $characters) {
+            echo "Lettre : $letter\n";
+            echo "Personnages : " . implode(', ', $characters) . "\n\n";
+        }
     }
 }
