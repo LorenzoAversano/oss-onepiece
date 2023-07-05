@@ -17,7 +17,7 @@ class Api
     }
 
     /**
-     * @return character[]
+     * @return array<string, array<string>>
      */
     public function getAllMarines(): array
     {
@@ -39,7 +39,7 @@ class Api
     }
 
     /**
-     * @return character[]
+     * @return array<string>
      */
     private function extractCharactersFromGroup(Crawler $groupCrawler): array
     {
@@ -51,4 +51,3 @@ class Api
         return $characters;
     }
 }
-
