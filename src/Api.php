@@ -14,7 +14,7 @@ class Api
         $this->client = $client;
     }
 
-    public function getAllCharacters(): array
+    public function getAllCharacters(): string
     {
         $response = $this->client->request(
             'GET',
