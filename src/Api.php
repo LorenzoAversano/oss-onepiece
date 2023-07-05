@@ -38,6 +38,9 @@ class Api
         return $characters;
     }
 
+    /**
+     * @return array
+     */
     private function extractCharactersFromGroup(Crawler $groupCrawler): array
     {
         $characterDatas= $groupCrawler->nextAll()->filter('.category-page__member-link');
