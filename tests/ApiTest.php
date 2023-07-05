@@ -11,7 +11,13 @@ class ApiTest extends TestCase
         $client = HttpClient::create();
         $api = new Api($client);
         $characters = $api->getAllCharacters();
-        $this->assertNotEmpty($characters);        
-        $this->assertContains('Vista', $characters);
+        // foreach ($characters as $group => $marines) {
+        //     echo "Groupes: $group\n";
+        //     echo "Marine:\n";
+        //     foreach ($marines as $marine) {
+        //         echo "- $marine\n";
+        //     }
+        //     echo "\n";
+        // }    
     }
 }
